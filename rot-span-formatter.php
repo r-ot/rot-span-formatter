@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Rot Span Formatter
  * Description: Fügt dem Gutenberg-Editor eine Möglichkeit hinzu, Text in <span> mit eigener CSS-Klasse zu wrappen. Pluginordner-Name muss "rot-span-formatter" sein!
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: r.ot
  */
 

@@ -16,7 +16,11 @@ function rot_check_for_github_update($transient) {
     $github_repo = 'rot-span-formatter';
 
     $github_api = 'https://api.github.com/repos/'.$github_user.'/'.$github_repo.'/releases/latest';
-    $response = wp_remote_get($github_api, ['headers' => ['User-Agent' => 'WordPress']]);
+    $response = wp_remote_get($github_api, ['headers' => [
+												'User-Agent' => 'WordPress',
+												'Authorization' => 'token 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',
+												]
+											]);
 
     if (is_wp_error($response)) {
         return $transient;

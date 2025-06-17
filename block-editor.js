@@ -37,7 +37,7 @@
         null,
         wp.element.createElement(RichTextToolbarButton, {
           icon: 'editor-code',
-          title: __('Span mit Klasse', 'rot'),
+          title: __('rot-span class', 'rot')  + (currentClass ? `: ${currentClass}` : ''),
           onClick: onToggle,
           isActive: isActive,
         })

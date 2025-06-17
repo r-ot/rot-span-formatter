@@ -13,9 +13,9 @@ function rot_check_for_github_update($transient) {
 
     $plugin_slug = 'rot-span-formatter/rot-span-formatter.php';
     $github_user = 'r-ot';
-    $github_repo = 'r-ot_repo';
+    $github_repo = 'rot-span-formatter';
 
-    $github_api = "https://api.github.com/repos/$github_user/$github_repo/releases/latest";
+    $github_api = 'https://api.github.com/repos/'.$github_user.'/'.$github_repo.'/releases/latest';
     $response = wp_remote_get($github_api, ['headers' => ['User-Agent' => 'WordPress']]);
 
     if (is_wp_error($response)) {
@@ -54,7 +54,7 @@ function rot_github_plugin_api_call($result, $action, $args) {
         'slug' => 'rot-span-formatter',
         'version' => '1.0.0', // Platzhalter
         'author' => '<a href="https://github.com/r-ot">r-ot</a>',
-        'homepage' => 'https://github.com/r-ot/r-ot_repo',
+        'homepage' => 'https://github.com/r-ot/rot-span-formatter',
         'sections' => [
             'description' => 'Füge benutzerdefinierte <span>-Formatierung in Gutenberg-Absätzen hinzu.',
         ],
